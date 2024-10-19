@@ -14,8 +14,8 @@
         1. импортируем публичный ключ `gpg --import public.key`
         2. импортируем приватный ключ `gpg --import private.key`
         
-4. расшифровать базу pass `gpg -d wrap.tar.gz.gpg | tar xzv`
-5. зашифровываем базу обратно `tar cfzv wrap.tar.gz --exclude='wrap.tar.gz' --exclude='kp.tar.gz' --exclude='readme.md' --exclude='.git' . | gpg -e -r фингерпринт_моего_ключа 'wrap.tar.gz'`
+4. расшифровать базу pass, запустив скрипт  `./dectipt.sh`
+5. зашифровываем базу обратно, запустив скрипт `./encript.sh параметр_фингерпринт_вашего_ключа`
 
 #### Мини справка по tar
 - -c Создание нового архивного файла.
